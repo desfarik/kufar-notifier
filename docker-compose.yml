@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  kufar-svch:
+    container_name: nestjs
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3000
+      - TZ=Europe/Minsk
+      - NODE_ENV=production
+      - SEARCH_CATEGORY=15010
+      - SEARCH_QUERY=микроволновая печь
+      - TELEGRAM_BOT_TOKEN=bot6427835745:AAF3DncpWJyoIlrECxJsPE890Bs1BNLJ_Ds
+      - TELEGRAM_CHAT_ID=-4059693421
+    ports:
+      - '4500:4500'
+    volumes:
+      - ./db/svch:/usr/app/db
+
