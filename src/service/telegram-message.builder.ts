@@ -6,7 +6,7 @@ import { formatPrice } from "../formatters/price.formatter";
 export class TelegramMessageBuilder {
     buildMessage(item: KufarItem): string {
         return `*${item.subject}*
- *Цена:*  ${formatPrice(item.price_byn)}
+*Цена:*  ${formatPrice(item.price_byn)}
 ${item.ad_link}`
     }
 }
