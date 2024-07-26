@@ -27,6 +27,7 @@ export class TelegramNotifier {
 
     async notify(message: string): Promise<void> {
         this.taskManager.exec(async () => {
+            console.log('try to send message to telegram');
             return  fetch(this.chatUrl, {
                 method: 'POST',
                 headers: HEADERS,
