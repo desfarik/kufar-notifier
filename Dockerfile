@@ -4,6 +4,8 @@ LABEL authors="dastreyko"
 
 RUN npm install -g npm@latest
 
+RUN npm config set strict-ssl false
+
 WORKDIR /usr/app
 
 COPY package*.json ./

@@ -14,7 +14,7 @@ const HEADERS = {
 
 @Injectable()
 export class TelegramNotifier {
-    taskManager = new TaskManager({delay: 200});
+    taskManager = new TaskManager({delay: 1000});
 
     constructor(@Inject(TELEGRAM_BOT_TOKEN) private botToken: string,
                 @Inject(TELEGRAM_CHAT_ID) private chatId: string,
